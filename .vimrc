@@ -1,3 +1,5 @@
+" .vimrc
+
 nnoremap c "_c
 set nocompatible
 filetype plugin on
