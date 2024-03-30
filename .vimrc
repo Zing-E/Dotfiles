@@ -17,7 +17,7 @@ Plug 'preservim/nerdtree'
 
 call plug#end()
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1 " Install Hack patched powerline font
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 
