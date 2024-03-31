@@ -1,0 +1,93 @@
+#  _________      .__     __       .___
+# /   _____/__  __|  |__ |  | __ __| _/
+# \_____  \\  \/  /  |  \|  |/ // __ | 
+# /        \>    <|   Y  \    </ /_/ | 
+#/_______  /__/\_ \___|  /__|_ \____ | 
+#        \/      \/    \/     \/    \/ 
+
+# Zing's sxhkdrc
+
+# Stop bspwm
+
+super + z
+	killall Xorg
+
+# Start terminal
+
+super + Return
+	st
+
+# Kill window 
+
+super + {_,shift + }a
+	bspc node -{c, k}
+
+# Start dmenu
+
+super + e
+	dmenu_run
+
+# Start Chrome
+
+super + j
+	google-chrome-stable
+
+# Starts nmtui
+
+super + c
+	st -e nmtui
+
+# Change Between Workspaces
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} focused:^{1-9,10}
+
+# Change to fullscreen
+
+super + u
+	bspc node -t \~fullscreen
+
+# Start pulsemixer
+
+super + k
+	st -e pulsemixer
+
+# Turn up audio
+
+super + b
+	pulsemixer --change-volume +15
+
+# Turn down audio
+
+super + x
+	pulsemixer --change-volume -15
+
+# Toggle mute
+
+super + m
+	pulsemixer --toggle-mute
+
+# Start tty-clock
+
+super + y
+	st -e tty-clock -tsc
+
+# Starts htop
+
+super + d
+	st -e htop
+
+# Change to US
+
+super + r
+	setxkbmap us
+
+# Change to dvorak
+
+super + l
+	setxkbmap -variant dvorak
+
+# Start nmtui
+
+super + n
+	st -e nmtui
