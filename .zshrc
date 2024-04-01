@@ -4,7 +4,7 @@
 #/_______ \/_______  /\___|_  / 
 #        \/        \/       \/  
 
-# ept's zshrc
+# Zing's zshrc
 
 # Enables colors
 
