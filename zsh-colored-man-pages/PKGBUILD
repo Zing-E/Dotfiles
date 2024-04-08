@@ -1,0 +1,21 @@
+# Maintainer: ZingE <zinge@gmail.com>
+
+pkgname=zsh-colored-man-pages
+pkgver=0
+pkgrel=1
+pkgdesc='Colored man pages from omz for Zsh'
+arch=('any')
+url='https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages'
+license=('MIT')
+provides=("$pkgname")
+
+depends=('zsh')
+source=('https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/colored-man-pages/colored-man-pages.plugin.zsh')
+sha512sums=('SKIP')
+
+package() {
+	_srcdir=${srcdir}/${pkgname}-${pkgver}
+	_plugindir=${pkgdir}/usr/share/zsh/plugins
+	
+	install -dm0755 ${_plugindir}/${pkgname}
+}
