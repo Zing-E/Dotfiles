@@ -5,8 +5,8 @@
 # Create used directories
 
 mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.local/bin \
-	/home/$USER/.local/src /home/$USER/.local/wallpapers
-
+        /home/$USER/.local/wallpapers
+ 
 # Download and install yay (its an aur manager)
 
 git clone https://aur.archlinux.org/yay.git
@@ -46,6 +46,10 @@ feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Download and install zsh-colored-man-pages
+
+bash install-zsh-colored-man-pages.sh
 
 # Lastly setup my st build
 
