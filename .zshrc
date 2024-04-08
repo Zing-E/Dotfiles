@@ -40,11 +40,11 @@ alias sl='ls --color=always'
 
 alias nmtui='sudo nmtui'
 alias cat='bat'
-alias vimrc='vim /Users/$USER/.vimrc' # If other Unix OS use /home/$USER/.vimrc
+alias vimrc='vim /home/$USER/.vimrc' # If MacOS use /Users/$USER/.vimrc
 
 # For MacOS only
 
-alias batper='cat /sys/class/power_supply/BAT1/capacity'
+#alias batper='cat /sys/class/power_supply/BAT1/capacity'
 
 # Add a extra nonroot path for this user
 
@@ -52,8 +52,16 @@ export PATH=/Users/$USER/.local/bin:$PATH
 
 # Plugins
 
-source /opt/homebrew/share/zsh-colored-man-pages/zsh-colored-man-pages.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.zsh 
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# For MacOS
+
+#source /opt/homebrew/share/zsh-colored-man-pages/zsh-colored-man-pages.zsh # I did this myself manually
+
+#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
