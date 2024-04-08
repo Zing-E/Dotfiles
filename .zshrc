@@ -42,9 +42,9 @@ alias nmtui='sudo nmtui'
 alias cat='bat'
 alias vimrc='vim /home/$USER/.vimrc' # If MacOS use /Users/$USER/.vimrc
 
-# For MacOS only
+# For Linux only
 
-#alias batper='cat /sys/class/power_supply/BAT1/capacity'
+alias batper='cat /sys/class/power_supply/BAT1/capacity'
 
 # Add a extra nonroot path for this user
 
