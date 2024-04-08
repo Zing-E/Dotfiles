@@ -34,7 +34,7 @@ alias ll='eza -l'
 
 # Correct me if ls is spelled wrong
 
-alias sl='ls --color=always'
+alias sl='exa'
 
 # Alias's
 
