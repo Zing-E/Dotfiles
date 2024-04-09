@@ -2,6 +2,8 @@
 
 # My Arch setup script (base-devel is needed for this)
 
+# Run this after starting Xorg (for wallpaper): feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
+
 # Create used directories
 
 mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.local/bin \
@@ -37,10 +39,6 @@ cp bspwmrc /home/$USER/.config/bspwm
 cp sxhkdrc /home/$USER/.config/sxhkd
 
 cp landscape.jpg /home/$USER/.local/wallpapers
-
-# setup wallpaper
-
-feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
 
 # Install vim plug
 
