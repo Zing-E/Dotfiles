@@ -30,7 +30,7 @@ super + e
 # Start Chrome
 
 super + j
-	google-chrome-stable
+	google-chrome-stable --force-dark-mode # MY EYES
 
 # Starts nmtui
 
