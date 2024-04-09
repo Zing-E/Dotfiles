@@ -32,7 +32,7 @@ cp .vimrc /home/$USER
 
 cp .zshrc /home/$USER
 
-cp bswpmrc /home/$USER/.config/bspwm
+cp bspwmrc /home/$USER/.config/bspwm
 
 cp sxhkdrc /home/$USER/.config/sxhkd
 
