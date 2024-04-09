@@ -32,9 +32,9 @@ cp .vimrc /home/$USER
 
 cp .zshrc /home/$USER
 
-cp .bswpmrc /home/$USER/.config/bspwm
+cp bswpmrc /home/$USER/.config/bspwm
 
-cp .sxhkdrc /home/$USER/.config/sxhkd
+cp sxhkdrc /home/$USER/.config/sxhkd
 
 cp landscape.jpg /home/$USER/.local/wallpapers
 
