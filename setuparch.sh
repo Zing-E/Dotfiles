@@ -2,7 +2,9 @@
 
 # My Arch setup script (base-devel is needed for this)
 
+# NOTE
 # Run this after starting Xorg (for wallpaper): feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
+# Also run :PlugInstall in vim to install plugins
 
 # Create used directories
 
