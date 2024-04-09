@@ -22,7 +22,7 @@ cd .. # Go back to Dotfiles
 # Install usefull software
 
 yay -S zsh zsh-syntax-highlighting zsh-autosuggestions bat eza xorg xorg-devel bspwm sxhkd git nano \
-         feh picom unclutter dmenu lxappearance ttf-hack-nerd xcursor-breeze google-chrome
+         feh picom unclutter dmenu lxappearance ttf-hack-nerd pulsemixer xcursor-breeze google-chrome
 
 # Install dotfiles
 
@@ -38,6 +38,8 @@ cp bspwmrc /home/$USER/.config/bspwm
 
 cp sxhkdrc /home/$USER/.config/sxhkd
 
+cp picom.conf /home/$USER/.config # This is so that the chrome borders look normal
+
 cp landscape.jpg /home/$USER/.local/wallpapers
 
 # Install vim plug
@@ -49,6 +51,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 bash install-zsh-colored-man-pages.sh
 
+# Enable and start pipwire
+
+systemctl --user enable pipewire-pulse
+systemctl --user start pipewire-pulse
+
 # Lastly setup my st build
 
 cd st-0.8.4
@@ -57,4 +64,3 @@ make
 
 sudo make install
 
-cd /home/$USER
