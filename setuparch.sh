@@ -5,7 +5,9 @@
 # NOTE
 # Run this after starting Xorg (for wallpaper): feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
 # Also run :PlugInstall in vim to install plugins
-
+# And please read what this script does, don't run commands on root from the internet;
+# if you dont know what there doing
+ 
 # Create used directories
 
 mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.local/bin \
@@ -49,7 +51,7 @@ cp landscape.jpg /home/$USER/.local/wallpapers
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Download and install zsh-colored-man-pages
+# Download and install zsh-colored-man-pages (read this script before runnig it)
 
 bash install-zsh-colored-man-pages.sh
 
