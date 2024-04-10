@@ -52,7 +52,7 @@ export PATH=/Users/$USER/.local/bin:$PATH
 
 # Plugins
 
-#source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.zsh 
+source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.zsh 
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
