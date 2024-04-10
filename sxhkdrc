@@ -7,6 +7,9 @@
 
 # Zing's sxhkdrc
 
+# I use dvorak so the letters are different but, sxhkd reads only qwerty
+# so thats why the letters seem weird```
+
 # Stop bspwm
 
 super + z
@@ -31,11 +34,6 @@ super + e
 
 super + j
 	google-chrome-stable --force-dark-mode # MY EYES
-
-# Starts nmtui
-
-super + c
-	st -e nmtui
 
 # Change Between Workspaces
 
@@ -86,8 +84,3 @@ super + r
 
 super + l
 	setxkbmap -variant dvorak
-
-# Start nmtui
-
-super + n
-	st -e nmtui

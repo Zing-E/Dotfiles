@@ -38,7 +38,6 @@ alias sl='exa'
 
 # Alias's
 
-alias nmtui='sudo nmtui'
 alias cat='bat'
 alias vimrc='vim /home/$USER/.vimrc' # If MacOS use /Users/$USER/.vimrc
 

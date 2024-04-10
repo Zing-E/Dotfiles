@@ -26,7 +26,8 @@ cd .. # Go back to Dotfiles
 # Install usefull software
 
 yay -S zsh zsh-syntax-highlighting zsh-autosuggestions bat eza wget xorg xorg-devel bspwm sxhkd git nano \
-         feh picom unclutter dmenu lxappearance ttf-hack-nerd pulsemixer xcursor-breeze google-chrome
+         feh picom unclutter dmenu lxappearance ttf-hack-nerd pulsemixer tty-clock xcursor-breeze\
+         google-chrome
 
 # Install dotfiles
 
