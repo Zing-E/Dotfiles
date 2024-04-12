@@ -10,8 +10,8 @@
  
 # Create used directories
 
-mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.local/bin \
-        /home/$USER/.local/wallpapers
+mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.config/ranger \ 
+         /home/$USER/.local/bin /home/$USER/.local/wallpapers
  
 # Download and install yay (its an aur manager)
 
@@ -33,6 +33,7 @@ yay -S zsh zsh-syntax-highlighting zsh-autosuggestions bat eza wget xorg xorg-de
 
 cp .xinitrc /home/$USER
 
+
 cp .fehbg /home/$USER
 
 cp .vimrc /home/$USER
@@ -42,6 +43,8 @@ cp .zshrc /home/$USER
 cp bspwmrc /home/$USER/.config/bspwm
 
 cp sxhkdrc /home/$USER/.config/sxhkd
+
+cp rc.conf /home/$USER/.config/ranger
 
 cp picom.conf /home/$USER/.config # This is so that the chrome borders look normal
 
