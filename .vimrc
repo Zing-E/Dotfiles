@@ -7,12 +7,13 @@ syntax on
 set encoding=utf-8
 set number relativenumber
 
+let g:polyglot_disabled = ["sensible"]
+
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'justinmk/vim-syntax-extra'
-Plug 'bfrg/vim-cpp-modern'
+Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 
 call plug#end()
