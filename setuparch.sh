@@ -33,7 +33,6 @@ yay -S zsh zsh-syntax-highlighting zsh-autosuggestions bat eza wget xorg xorg-de
 
 cp .xinitrc /home/$USER
 
-
 cp .fehbg /home/$USER
 
 cp .vimrc /home/$USER
