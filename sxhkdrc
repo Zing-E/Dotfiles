@@ -84,3 +84,8 @@ super + r
 
 super + l
 	setxkbmap -variant dvorak
+
+# Start ranger
+
+super + t
+	st -e ranger /home/$USER
