@@ -10,8 +10,7 @@
  
 # Create used directories
 
-mkdir -p /home/$USER/.config/bspwm /home/$USER/.config/sxhkd /home/$USER/.config/ranger \ 
-         /home/$USER/.local/bin /home/$USER/.local/wallpapers
+mkdir -p /home/$USER/.config/{bspwm,sxhkd,ranger} /home/$USER/.local/{bin,wallpapers} 
  
 # Download and install yay (its an aur manager)
 
@@ -32,8 +31,6 @@ yay -S zsh zsh-syntax-highlighting zsh-autosuggestions bat eza wget xorg xorg-de
 # Install dotfiles
 
 cp .xinitrc /home/$USER
-
-cp .fehbg /home/$USER
 
 cp .vimrc /home/$USER
 
