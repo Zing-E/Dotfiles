@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# AutoPush\ a simple script for automating pushing to github
+
+[ "$(echo "$@" | wc -w | awk '{print $1}')" -lt 3 ] && echo "Usage: $0 [branch] [comment] [file(s)]" && exit 1
+
+for i in "$@"; do
+	[ "$i" = "$1" ] || [ "$i" = "$2" ] && continue
+	git add "$i"
+done
+
+git commit -m "$2"
+
+git push -u origin "$1"
