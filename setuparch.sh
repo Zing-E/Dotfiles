@@ -46,6 +46,8 @@ cp picom.conf /home/$USER/.config # This is so that the chrome borders look norm
 
 cp landscape.jpg /home/$USER/.local/wallpapers
 
+cp ap /home/$USER/.local/bin
+
 # Install vim plug
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# AutoPush\ a simple script for automating pushing to github
+# ap a simple script for automating pushing to github
 
 [ "$(echo "$@" | wc -w | awk '{print $1}')" -lt 3 ] && echo "Usage: $0 [branch] [comment] [file(s)]" && exit 1
 
