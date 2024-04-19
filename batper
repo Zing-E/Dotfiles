@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# batper prints battery percentage in middle of terminal
+# uses https://github.com/niksingh710/center-align
+
+BAT="/sys/class/power_supply/BAT1/capacity"
+
+while true; do
+	printf "Battery percentage: %d\n" "$(cat $BAT)"
+	sleep 1
+done
