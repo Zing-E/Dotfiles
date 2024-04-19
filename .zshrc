@@ -42,6 +42,7 @@ alias sl='exa'
 
 alias cat='bat'
 alias vimrc='vim /home/$USER/.vimrc'
+alias zshrc='vim /home/$USER/.zshrc'
 
 # For Linux only
 
