@@ -8,6 +8,8 @@
 
 # Enables colors
 
+# If using MacOS change /home/ to /Users/
+
 autoload -U colors && colors
 
 # Autocomplete settings
@@ -39,7 +41,7 @@ alias sl='exa'
 # Alias's
 
 alias cat='bat'
-alias vimrc='vim /home/$USER/.vimrc' # If MacOS use /Users/$USER/.vimrc
+alias vimrc='vim /home/$USER/.vimrc'
 
 # For Linux only
 
@@ -47,7 +49,7 @@ alias batper='cat /sys/class/power_supply/BAT1/capacity'
 
 # Add a extra nonroot path for this user
 
-export PATH=/Users/$USER/.local/bin:$PATH
+export PATH=/home/$USER/.local/bin:$PATH
 
 # Plugins
 
