@@ -32,7 +32,7 @@ alias grep='grep --color=auto'
 
 alias ls='eza'
 alias la='eza -a'
-alias ll='eza -l'
+alias ll='eza -la'
 
 # Correct me if ls is spelled wrong
 
