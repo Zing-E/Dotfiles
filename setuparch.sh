@@ -39,7 +39,11 @@ cp bspwmrc /home/$USER/.config/bspwm
 
 cp sxhkdrc /home/$USER/.config/sxhkd
 
+# Add ranger plugin for icons
+
 cp rc.conf /home/$USER/.config/ranger
+
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
 cp picom.conf /home/$USER/.config # This is so that the chrome borders look normal
 
