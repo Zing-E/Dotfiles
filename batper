@@ -6,6 +6,6 @@
 BAT="/sys/class/power_supply/BAT1/capacity"
 
 while true; do
-	printf "Battery percentage: %d\n" "$(cat $BAT)"
+	printf "Battery percentage: %d\n" "$(cat $BAT)" | center
 	sleep 1
 done
