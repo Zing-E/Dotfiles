@@ -58,12 +58,8 @@ source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.zsh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # For MacOS
 
 #source /opt/homebrew/share/zsh-colored-man-pages/zsh-colored-man-pages.zsh # I did this myself manually
 
 #source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
