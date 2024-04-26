@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# This script clones dotfiles into a usb drive and umounts it.
+
+FILES="https://github.com/Zing-E/Dotfiles"
+
+CWD=$(pwd)
+
+WHERE=$(sudo fdisk -l | awk '/^\/dev/ {print $1}' | dmenu -p "Where do you want to save your dot files?")
+
+CONFIRM=$(printf "Yes\nNo" | dmenu -p "Are you sure you want to save dotfiles to: $WHERE")
+
+[ "$CONFIRM" != "Yes" ] && exit
+
+# Make sure its not already mounted
+
+[ "$(mount | awk '{print $1}' | grep -q "$WHERE")" ] && echo "Device is already mounted." && exit 1
+
+sudo mount "$WHERE" /mnt
+
+cd /mnt
+
+sudo rm -rf Dotfiles
+
+sudo git clone "$FILES"
+
+# cd out of /mnt to umount
+
+cd "$CWD"
+
+sudo umount /mnt

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# gar a simple script to automate removing files from github
+
+[ "$#" -lt 3 ] && echo "usage: $0 [branch] [comment] [file(s)]" && exit 1
+
+for i in "$@"; do
+	[ "$i" = "$1" ] || [ "$i" = "$2" ] && continue
+	git rm "$i"
+done
+
+git commit -m "$2"
+
+git push -u origin "$1"

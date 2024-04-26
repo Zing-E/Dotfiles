@@ -15,7 +15,7 @@ mkdir -p /home/$USER/.config/{bspwm,sxhkd,ranger} /home/$USER/.local/{bin,wallpa
 
 git clone https://aur.archlinux.org/yay.git
 
-cd yay
+cd yay || exit
 
 makepkg -si
 
@@ -24,7 +24,7 @@ cd .. # Go back to Dotfiles
 # Install usefull software
 
 yay -S zsh zsh-syntax-highlighting bat eza wget xorg xorg-devel xorg-xinit bspwm sxhkd \
-       git nano feh picom unclutter dmenu lxappearance htop ranger ueberzug ttf-hack-nerd pulsemixer tty-clock \ 
+       git nano feh picom unclutter dmenu lxappearance htop ranger ueberzug ttf-hack-nerd pulsemixer tty-clock \
        xcursor-breeze google-chrome
 
 # Install dotfiles
@@ -51,9 +51,11 @@ cp landscape.jpg /home/$USER/.local/wallpapers
 
 # Scripts
 
-cp gap /home/$USER/.local/bin
+cp scripts/gap /home/$USER/.local/bin
 
-cp gar /home/$USER/.local/bin
+cp scripts/gar /home/$USER/.local/bin
+
+cp scripts/dfsave /home/$USER/.local/bin
 
 # Install vim plug
 
@@ -71,7 +73,7 @@ systemctl --user start pipewire-pulse
 
 # Lastly setup my st build
 
-cd st-0.8.4
+cd st-0.8.4 || exit
 
 make
 
