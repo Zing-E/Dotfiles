@@ -4,6 +4,6 @@
 
 IP=$(ip a | awk '/inet 10/ {print $2}')
 
-echo ${IP%/24}
+echo "${IP%/24}"
 
 #ifconfig | awk '/inet 10/ {print $2}'

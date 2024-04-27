@@ -48,11 +48,7 @@ cp landscape.jpg /home/$USER/.local/wallpapers
 
 # Scripts
 
-cp scripts/gap /home/$USER/.local/bin
-
-cp scripts/gar /home/$USER/.local/bin
-
-cp scripts/dfsave /home/$USER/.local/bin
+cp scripts/* /home/$USER/.local/bin
 
 # Install vim plug
 
