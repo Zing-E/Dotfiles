@@ -16,11 +16,11 @@ CONFIRM=$(printf "Yes\nNo" | dmenu -p "Are you sure you want to save dotfiles to
 
 mount | awk '{print $1}' | grep -q "$WHERE" && echo "Device is already mounted." && exit 1
 
-sudo mount "$WHERE" /mnt || exit
-
 # Make sure a device is not already mounted on /mnt
 
 mount | awk '{print $3}' | grep -qw "/mnt" && echo "A device is already on /mnt" && exit 1
+
+sudo mount "$WHERE" /mnt || exit
 
 cd /mnt || exit
 
