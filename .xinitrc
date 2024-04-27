@@ -6,5 +6,5 @@ unclutter &
 #pipewire &
 #pipewire-pulse &
 #wireplumber &
-bspwm
 picom --vsync --fade-in-step=1 --fade-out-step=1 &
+bspwm
