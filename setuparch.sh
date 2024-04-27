@@ -65,7 +65,8 @@ bash install-zsh-colored-man-pages.sh
 
 # Enable and start pipewire
 
-if [ $(grep -q "Artix" /etc/os-release) ]; then
+if grep -q "Artix" /etc/os-release 
+then
 	echo "See .xintrc for pipewire"
 else
 	systemctl --user enable pipewire-pulse
