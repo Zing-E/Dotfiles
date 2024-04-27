@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Mount Drive
+
+DRIVE=$(sudo fdisk -l | awk '/^\/dev/ {print $1}' | dmenu -p "Pick a drive to mount: ")
+
+# Make sure its not already mounted
+
+mount | awk '{print $1}' | grep -q "$DRIVE" && echo "Device is already mounted." && exit 1
+
+WHERE=$(true | dmenu -p "Where do you want to mount $DRIVE:")
+
+# Make sure that mount point is not already used
+
+mount | awk '{print $3}' | grep -qw "$WHERE" && echo "A device is already mounted there." && exit 1
+
+sudo mount "$DRIVE" "$WHERE"

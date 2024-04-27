@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Change to value in front of /inet / to the begining of your ip in your local network (or something like that)
+
+IP=$(ip a | awk '/inet 10/ {print $2}')
+
+echo ${IP%/24}
+
+#ifconfig | awk '/inet 10/ {print $2}'
