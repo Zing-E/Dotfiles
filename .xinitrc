@@ -1,5 +1,10 @@
+# If using Artix uncomment the pipewire commands
+
 setxkbmap -variant dvorak
 bash ~/.fehbg
 unclutter &
-picom --vsync --fade-in-step=1 --fade-out-step=1 --fade-delta=0 &
+#pipewire &
+#pipewire-pulse &
+#wireplumber &
 bspwm
+picom --vsync --fade-in-step=1 --fade-out-step=1 &

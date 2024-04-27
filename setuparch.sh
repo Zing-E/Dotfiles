@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# My Arch setup script (base-devel is needed for this)
+# My Arch/Artix setup script (base-devel is needed for this)
 
 # NOTE
 # Run this after starting Xorg (for wallpaper): feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
-# Also run :PlugInstall in vim to install plugins
+# Also run :PlugInstall in vim to install plugins.
+# If using Artix Linux enable the Arch repo extra for some packages here.
 # And please read what this script does, don't run commands from the internet if you don't know what there doing!
  
 # Create used directories
@@ -23,7 +24,7 @@ cd .. # Go back to Dotfiles
 
 # Install usefull software
 
-yay -S zsh zsh-syntax-highlighting bat eza wget xorg xorg-devel xorg-xinit bspwm sxhkd \
+yay -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-devel xorg-xinit bspwm sxhkd \
        git nano feh picom unclutter dmenu lxappearance htop ranger ueberzug ttf-hack-nerd pulsemixer tty-clock \
        xcursor-breeze google-chrome
 
@@ -62,10 +63,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 bash install-zsh-colored-man-pages.sh
 
-# Enable and start pipwire
+# Enable and start pipewire
 
-systemctl --user enable pipewire-pulse
-systemctl --user start pipewire-pulse
+if [ $(grep -q "Artix" /etc/os-release) ]; then
+	echo "See .xintrc for pipewire"
+else
+	systemctl --user enable pipewire-pulse
+	systemctl --user start pipewire-pulse
+fi
 
 # Lastly setup my st build
 
