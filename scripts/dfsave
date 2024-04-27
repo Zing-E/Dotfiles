@@ -18,6 +18,10 @@ mount | awk '{print $1}' | grep -q "$WHERE" && echo "Device is already mounted."
 
 sudo mount "$WHERE" /mnt || exit
 
+# Make sure a device is not already mounted on /mnt
+
+mount | awk '{print $3}' | grep -qw "/mnt" && echo "A device is already on /mnt" && exit 1
+
 cd /mnt || exit
 
 sudo rm -rf Dotfiles
