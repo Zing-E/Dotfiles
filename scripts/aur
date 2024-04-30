@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# aur a simple aur manager
+
+CACHE_DIR="/home/$USER/.cache/aur"
+
+install () {
+	cd "$CACHE_DIR" || exit
+	git clone "https://aur.archlinux.org/$1"
+
+	cd "$1" || exit
+	
+	makepkg -si || cd .. && rm -rf "$1" && exit 1
+}
+
+update () {
+	cd "$CACHE_DIR" || exit
+	for package in "$CACHE_DIR"/*
+	do
+		git clone "https://aur.archlinux.org/$package" "$package-tmp"
+		if [ "$(grep "pkgver=" "$package/PKGBUILD" | cut -c 8-)" != \
+		       	"$(grep "pkgver=" "$package-tmp/PKGBUILD" | cut -c 8-)" ]
+		then
+			mv "$package-tmp" "$package"
+			cd "$package" || exit
+			makepkg -si
+		else
+			rm -rf "$package-tmp"
+		fi
+	done
+}
+
+case "$1" in 
+	install) for i in "$@"
+	do
+		[ "$i" = "$1" ] && continue
+		install "$i"
+	done ;;
+	update) update ;;
+	*) echo "$0: [install update]" && exit ;;
+esac
