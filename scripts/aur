@@ -6,21 +6,30 @@ CACHE_DIR="/home/$USER/.cache/aur"
 
 install () {
 	cd "$CACHE_DIR" || exit
-	git clone "https://aur.archlinux.org/$1"
 
-	cd "$1" || exit
+	for package in "$@"
+	do
+		[ "$package" = "install" ] && continue
 	
-	makepkg -si || cd .. && rm -rf "$1" && exit 1
+		git clone "https://aur.archlinux.org/$package"
+
+		cd "$package" || exit
+	
+		makepkg -si
+	done	
 }
 
 update () {
 	cd "$CACHE_DIR" || exit
 	for package in "$CACHE_DIR"/*
 	do
+		package=$(echo "$package" | awk -F "/" '{print $NF}')
+
 		git clone "https://aur.archlinux.org/$package" "$package-tmp"
-		if [ "$(grep "pkgver=" "$package/PKGBUILD" | cut -c 8-)" != \
-		       	"$(grep "pkgver=" "$package-tmp/PKGBUILD" | cut -c 8-)" ]
+		if [ "$(awk -F "=" '/^pkgver/ {print $2}' "$package/PKGBUILD")" != \
+		       	"$(awk -F "=" '/^pkgver/ {print $2}' "$package-tmp/PKGBUILD")" ]
 		then
+			rm -rf "$package"
 			mv "$package-tmp" "$package"
 			cd "$package" || exit
 			makepkg -si
@@ -31,11 +40,7 @@ update () {
 }
 
 case "$1" in 
-	install) for i in "$@"
-	do
-		[ "$i" = "$1" ] && continue
-		install "$i"
-	done ;;
+	install) install "$@" ;;
 	update) update ;;
 	*) echo "$0: [install update]" && exit ;;
 esac
