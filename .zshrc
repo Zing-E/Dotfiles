@@ -24,23 +24,13 @@ _comp_options+=(globdots)
 
 PS1="%B%{$fg[green]%}[%{$fg[green]%}%n%{$fg[green]%}@%{$fg[green]%}%M %{$fg[green]%}%~%{$fg[green]%}]$%b "
 
-# Make grep have color
-
-alias grep='grep --color=auto'
-
-# switch ls to eza (it just looks better)
+# Aliases
 
 alias ls='eza'
 alias la='eza -a'
 alias ll='eza -la'
-
-# Correct me if ls is spelled wrong
-
+alias grep='grep --color=auto'
 alias sl='exa'
-
-# Alias's
-
-alias cat='bat'
 alias vimrc='vim /home/$USER/.vimrc'
 alias zshrc='vim /home/$USER/.zshrc'
 
