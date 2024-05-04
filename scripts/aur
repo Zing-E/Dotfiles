@@ -11,7 +11,15 @@ install () {
 	do
 		[ "$package" = "install" ] && continue
 	
-		git clone "https://aur.archlinux.org/$package"
+		git clone "https://aur.archlinux.org/$package" 2>/dev/null
+			
+		dir=$(ls "$package")
+
+		if ! echo "$dir" | grep -qw "PKGBUILD"
+		then
+			echo "$0: $package is not a package."
+			rm -rf "$package" && exit 1
+		fi
 
 		cd "$package" || exit
 	
@@ -23,9 +31,17 @@ update () {
 	cd "$CACHE_DIR" || exit
 	for package in "$CACHE_DIR"/*
 	do
+		dir=$(ls "$package")
+
+		if ! echo "$dir" | grep -qw "PKGBUILD"
+		then
+			echo "$0: $package is not a package." && exit 1
+		fi
+
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 
-		git clone "https://aur.archlinux.org/$package" "$package-tmp"
+		git clone "https://aur.archlinux.org/$package" "$package-tmp" 2>/dev/null
+		
 		if [ "$(awk -F "=" '/^pkgver/ {print $2}' "$package/PKGBUILD")" != \
 		       	"$(awk -F "=" '/^pkgver/ {print $2}' "$package-tmp/PKGBUILD")" ]
 		then
