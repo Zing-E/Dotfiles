@@ -2,6 +2,11 @@
 
 # aur a simple aur manager
 
+# USAGE
+# install [package(s)] (Install an aur package)
+# update (Update all aur packages on system)
+# clean (This removes cache of deleted aur packages)
+
 # This is the dir where aur keeps up with the built packages; you can put it where ever you like.
 
 CACHE_DIR="/home/$USER/.cache/aur"
@@ -25,7 +30,7 @@ install () {
 	
 		makepkg -si
 
-		cd "$CACHE_DIR"
+		cd "$CACHE_DIR" || exit
 	done	
 }
 
@@ -50,7 +55,7 @@ update () {
 			cd "$package" || exit
 			makepkg -si
 			
-			cd "$CACHE_DIR"
+			cd "$CACHE_DIR" || exit
 		else
 			rm -rf "$package-tmp"
 		fi
@@ -63,10 +68,11 @@ clean () {
 	do
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 
-		if ! pacman -Qm | grep -qw "$package"
+		if ! { pacman -Qq; pacman -Qqm; } | grep -qw "$package"
 		then
 			rm -rf "$package"
 		fi
+		
 	done
 }
 
