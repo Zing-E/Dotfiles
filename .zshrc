@@ -34,10 +34,6 @@ alias sl='exa'
 alias vimrc='vim /home/$USER/.vimrc'
 alias zshrc='vim /home/$USER/.zshrc'
 
-# For Linux only
-
-alias batper='cat /sys/class/power_supply/BAT1/capacity'
-
 # Add a extra nonroot path for this user
 
 export PATH=/home/$USER/.local/bin:$PATH
