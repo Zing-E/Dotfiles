@@ -2,6 +2,8 @@
 
 # aur a simple aur manager
 
+# This is the dir where aur keeps up with the built packages; you can put it where ever you like.
+
 CACHE_DIR="/home/$USER/.cache/aur"
 
 install () {
@@ -13,9 +15,7 @@ install () {
 	
 		git clone "https://aur.archlinux.org/$package" 2>/dev/null
 			
-		dir=$(ls "$package")
-
-		if ! echo "$dir" | grep -qw "PKGBUILD"
+		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
 		then
 			echo "$0: $package is not a package."
 			rm -rf "$package" && exit 1
@@ -24,6 +24,8 @@ install () {
 		cd "$package" || exit
 	
 		makepkg -si
+
+		cd "$CACHE_DIR"
 	done	
 }
 
@@ -31,9 +33,7 @@ update () {
 	cd "$CACHE_DIR" || exit
 	for package in "$CACHE_DIR"/*
 	do
-		dir=$(ls "$package")
-
-		if ! echo "$dir" | grep -qw "PKGBUILD"
+		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
 		then
 			echo "$0: $package is not a package." && exit 1
 		fi
@@ -49,8 +49,23 @@ update () {
 			mv "$package-tmp" "$package"
 			cd "$package" || exit
 			makepkg -si
+			
+			cd "$CACHE_DIR"
 		else
 			rm -rf "$package-tmp"
+		fi
+	done
+}
+
+clean () {
+	cd "$CACHE_DIR" || exit
+	for package in "$CACHE_DIR"/*
+	do
+		package=$(echo "$package" | awk -F "/" '{print $NF}')
+
+		if ! pacman -Qm | grep -qw "$package"
+		then
+			rm -rf "$package"
 		fi
 	done
 }
@@ -58,5 +73,6 @@ update () {
 case "$1" in 
 	install) install "$@" ;;
 	update) update ;;
-	*) echo "$0: [install update]" && exit ;;
+	clean) clean ;; 
+	*) echo "$0: [install update clean]" && exit ;;
 esac
