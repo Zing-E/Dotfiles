@@ -41,7 +41,7 @@ update () {
 	do
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 
-		[ "$package" = "package.gz" ] && continue
+		[ "$package" = "packages.gz" ] && continue
 
 		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
 		then
