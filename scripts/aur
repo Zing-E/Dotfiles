@@ -70,6 +70,8 @@ clean () {
 	for package in "$CACHE_DIR"/*
 	do
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
+		
+		[ "$package" = "packages.gz" ] && continue
 
 		if ! { pacman -Qq; pacman -Qqm; } | grep -qw "$package"
 		then
