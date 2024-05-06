@@ -5,6 +5,7 @@
 # USAGE
 # install [package(s)] (Install an aur package)
 # update (Update all aur packages on system)
+# search (Searches through aur database, download https://aur.archlinux.org/packages.gz into your aur cache dir)
 # clean (This removes cache of deleted aur packages)
 
 # This is the dir where aur keeps up with the built packages; you can put it where ever you like.
@@ -38,12 +39,14 @@ update () {
 	cd "$CACHE_DIR" || exit
 	for package in "$CACHE_DIR"/*
 	do
+		package=$(echo "$package" | awk -F "/" '{print $NF}')
+
+		[ "$package" = "package.gz" ] && continue
+
 		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
 		then
 			echo "$0: $package is not a package." && exit 1
 		fi
-
-		package=$(echo "$package" | awk -F "/" '{print $NF}')
 
 		git clone "https://aur.archlinux.org/$package" "$package-tmp" 2>/dev/null
 		
@@ -76,9 +79,19 @@ clean () {
 	done
 }
 
+search () { 
+	for package in "$@"
+	do
+		[ "$package" = "search" ] && continue
+
+		grep "$package" "$CACHE_DIR/packages.gz"
+	done
+}
+
 case "$1" in 
 	install) install "$@" ;;
 	update) update ;;
+	search) search "$@" ;;
 	clean) clean ;; 
-	*) echo "$0: [install update clean]" && exit ;;
+	*) echo "$0: [install update clean search]" && exit ;;
 esac
