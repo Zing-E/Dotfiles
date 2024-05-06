@@ -14,12 +14,12 @@ mkdir -p /home/$USER/.config/{bspwm,sxhkd,ranger} /home/$USER/.local/{bin,wallpa
  
 # Install usefull software
 
-sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-devel xorg-xinit bspwm sxhkd \
-       git nano feh picom unclutter dmenu lxappearance htop ranger ueberzug ttf-hack-nerd pulsemixer
+sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-xinit bspwm sxhkd \
+       git nano feh picom unclutter dmenu lxappearance ranger ueberzug ttf-hack-nerd pulsemixer
 
 # Download software from aur
 
-./scripts/aur install xcursor-breeze tty-clock google-chrome
+./scripts/aur install htop-vim xcursor-breeze tty-clock google-chrome
 
 # Install dotfiles
 
