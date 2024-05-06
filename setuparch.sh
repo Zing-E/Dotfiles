@@ -3,14 +3,14 @@
 # My Arch/Artix setup script (base-devel is needed for this)
 
 # NOTE
-# Run this after starting Xorg (for wallpaper): feh --bg-scale /home/$USER/.local/wallpapers/landspace.jpg
+# Run this after starting Xorg (for wallpaper): feh --bg-scale /home/"$USER"/.local/wallpapers/landspace.jpg
 # Also run :PlugInstall in vim to install plugins.
 # If using Artix Linux enable the Arch repo extra for some packages here.
 # And please read what this script does, don't run commands from the internet if you don't know what there doing!
  
 # Create used directories
 
-mkdir -p /home/$USER/.config/{bspwm,sxhkd,ranger} /home/$USER/.local/{bin,wallpapers} 
+mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wallpapers} 
  
 # Install usefull software
 
@@ -23,25 +23,25 @@ sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg
 
 # Install dotfiles
 
-cp .xinitrc /home/$USER
+cp .xinitrc /home/"$USER"
 
-cp .vimrc /home/$USER
+cp .vimrc /home/"$USER"
 
-cp .zshrc /home/$USER
+cp .zshrc /home/"$USER"
 
-cp bspwmrc /home/$USER/.config/bspwm
+cp bspwmrc /home/"$USER"/.config/bspwm
 
-cp sxhkdrc /home/$USER/.config/sxhkd
+cp sxhkdrc /home/"$USER"/.config/sxhkd
 
-cp rc.conf /home/$USER/.config/ranger
+cp rc.conf /home/"$USER"/.config/ranger
 
-cp picom.conf /home/$USER/.config # This is so that the chrome borders look normal
+cp picom.conf /home/"$USER"/.config # This is so that the chrome borders look normal
 
-cp landscape.jpg /home/$USER/.local/wallpapers
+cp landscape.jpg /home/"$USER"/.local/wallpapers
 
 # Scripts
 
-cp scripts/* /home/$USER/.local/bin
+cp scripts/* /home/"$USER"/.local/bin
 
 # Install vim plug
 
