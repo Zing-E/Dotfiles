@@ -5,7 +5,7 @@
 # USAGE
 # install [package(s)] (Install an aur package)
 # update (Update all aur packages on system)
-# search (Searches through aur database, download https://aur.archlinux.org/packages.gz into your aur cache dir)
+# search (Searches through aur database, download https://aur.archlinux.org/packages.gz and unzip it into your aur cache dir)
 # clean (This removes cache of deleted aur packages)
 
 # This is the dir where aur keeps up with the built packages; you can put it where ever you like.
@@ -41,7 +41,7 @@ update () {
 	do
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 
-		[ "$package" = "packages.gz" ] && continue
+		[ "$package" = "packages" ] && continue
 
 		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
 		then
@@ -71,7 +71,7 @@ clean () {
 	do
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 		
-		[ "$package" = "packages.gz" ] && continue
+		[ "$package" = "packages" ] && continue
 
 		if ! { pacman -Qq; pacman -Qqm; } | grep -qw "$package"
 		then
@@ -86,7 +86,7 @@ search () {
 	do
 		[ "$package" = "search" ] && continue
 
-		grep "$package" "$CACHE_DIR/packages.gz"
+		grep "$package" "$CACHE_DIR/packages"
 	done
 }
 
@@ -95,5 +95,5 @@ case "$1" in
 	update) update ;;
 	search) search "$@" ;;
 	clean) clean ;; 
-	*) echo "$0: [install update clean search]" && exit ;;
+	*) echo "$0: [install update search clean]" && exit ;;
 esac
