@@ -1,0 +1,18 @@
+# Maintainer: Zing-E
+
+pkgname=zsh-colored-man-pages
+pkgver=0.1
+pkgrel=1
+pkgdesc='Colored man pages from Oh My Zsh plugin'
+
+arch=('any')
+url='https://github.com/ohmyzsh/ohmyzsh'
+license=('MIT')
+provides=('zsh-colored-man-pages')
+depends=('zsh')
+sha512sums=('SKIP')
+source=("${pkgname}.zsh::https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/colored-man-pages/colored-man-pages.plugin.zsh")
+
+package() {
+	install -Dm775 ${srcdir}/${pkgname}.zsh ${pkgdir}/usr/share/zsh/plugins/${pkgname}/${pkgname}.zsh
+}
