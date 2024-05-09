@@ -50,7 +50,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # Download and install zsh-colored-man-pages (read this script before runnig it)
 
-bash install-zsh-colored-man-pages.sh
+cd zsh-colored-man-pages || exit
+
+makepkg -si
+
+cd ..
 
 # Enable and start pipewire
 
