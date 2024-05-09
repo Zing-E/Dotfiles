@@ -21,7 +21,7 @@ install () {
 	
 		git clone "https://aur.archlinux.org/$package" 2>/dev/null
 			
-		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
+		if ! ls "$package" | grep -qw "PKGBUILD"
 		then
 			echo "$0: $package is not a package."
 			rm -rf "$package" && exit 1
@@ -43,7 +43,7 @@ update () {
 
 		[ "$package" = "packages" ] && continue
 
-		if ! echo "$(ls "$package")" | grep -qw "PKGBUILD"
+		if ! ls "$package" | grep -qw "PKGBUILD"
 		then
 			echo "$0: $package is not a package." && exit 1
 		fi
