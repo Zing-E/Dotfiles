@@ -15,7 +15,7 @@ mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wa
 # Install usefull software
 
 sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-xinit bspwm sxhkd \
-       man-pages git mpv nano feh picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
+       man-pages git yt-dlp mpv nano feh picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
 
 # Download software from aur
 
