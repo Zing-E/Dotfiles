@@ -66,10 +66,18 @@ else
 	systemctl --user start pipewire-pulse
 fi
 
-# Lastly setup my st build
+# Lastly setup my st and dmenu build
 
 cd st-0.8.4 || exit
 
 make
+
+sudo make install
+
+cd ..
+
+cd dmenu-5.2 || exit
+
+make 
 
 sudo make install
