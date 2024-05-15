@@ -2,9 +2,9 @@
 
 # This is useful because launching the browser is slow on older hardware
 
-BROWSER="google-chrome-stable"
+BROWSER="google-chrome-stable --force-dark-mode"
 
-COMMON_WEBSITES="google.com\nreddit.com\nsuckless.org"
+COMMON_WEBSITES="reddit.com\nsuckless.org"
 
 WEBSITE=$(echo "$COMMON_WEBSITES" | dmenu -p "Type website to visit:")
 
