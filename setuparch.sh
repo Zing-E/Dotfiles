@@ -10,12 +10,14 @@
  
 # Create used directories
 
-mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wallpapers} 
+mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wallpapers} \
+       	/home/"$USER"/.cache/aur
  
 # Install usefull software
 
 sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-xinit bspwm sxhkd \
-       man-pages git yt-dlp mpv nano feh picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
+       noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra man-pages git yt-dlp mpv nano feh \
+       picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
 
 # Download software from aur
 
