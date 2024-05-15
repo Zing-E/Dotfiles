@@ -89,3 +89,8 @@ super + l
 
 super + p
 	st -e ranger /home/$USER
+
+# Start websearch
+
+super + o
+	websearch

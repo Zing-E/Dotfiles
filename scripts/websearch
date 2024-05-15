@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# This is useful because launching the browser is slow on older hardware
+
+BROWSER="google-chrome-stable"
+
+COMMON_WEBSITES="google.com\nreddit.com\nsuckless.org"
+
+WEBSITE=$(echo "$COMMON_WEBSITES" | dmenu -p "Type website to visit:")
+
+[ -z "$WEBSITE" ] && exit 1
+
+$BROWSER "$WEBSITE"
