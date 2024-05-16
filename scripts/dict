@@ -2,4 +2,4 @@
 
 [ -z "$1" ] && echo "usage: $0: [word]" && exit 1
 
-curl -s "dict://dict.org/d:$1" | sed -E -e '/^[0-9]+/d' -e '/^\./d' | less
+curl -s "dict://dict.org/d:$1" | sed -E -e '/^[0-9]+/d' -e '/^\./d' | less -c
