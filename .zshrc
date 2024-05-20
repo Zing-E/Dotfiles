@@ -34,10 +34,6 @@ alias sl='eza'
 alias vimrc='vim /home/$USER/.vimrc'
 alias zshrc='vim /home/$USER/.zshrc'
 
-# vi mode
-
-bindkey -v
-
 # Add a extra nonroot path for this user
 
 export PATH=/home/$USER/.local/bin:$PATH
