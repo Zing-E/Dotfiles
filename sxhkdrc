@@ -77,7 +77,7 @@ super + d
 
 # Start gvim
 
-super + a
+super + v
 	gvim
 
 # Change to US
