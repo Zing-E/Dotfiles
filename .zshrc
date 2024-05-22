@@ -30,7 +30,7 @@ alias ls='eza'
 alias la='eza -a'
 alias ll='eza -la'
 alias grep='grep --color=auto'
-alias sl='eza'
+alias neofetch='fastfetch --config neofetch'
 alias vimrc='vim /home/$USER/.vimrc'
 alias zshrc='vim /home/$USER/.zshrc'
 
