@@ -8,7 +8,7 @@
 # Zing's sxhkdrc
 
 # I use dvorak so the letters are different but, sxhkd reads only qwerty
-# so thats why the letters seem weird
+# so thats why the letters seem weird```
 
 # Stop bspwm
 
@@ -75,11 +75,6 @@ super + y
 super + d
 	st -e htop
 
-# Start gvim
-
-super + v
-	gvim
-
 # Change to US
 
 super + r
@@ -95,7 +90,17 @@ super + l
 super + p
 	st -e ranger /home/$USER
 
-# Start websearch
+# Game selector
 
-super + o
+super + i
+	games
+
+# Web search
+
+super + o 
 	websearch
+
+# Start gvim
+
+super + v
+	gvim

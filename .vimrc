@@ -24,12 +24,10 @@ color gruvbox
 
 set bg=dark
 
-highlight Normal ctermbg=None
-
 set guioptions=Ace 
 
 " For MacOS
 "set guifont=HackNFM-Regular:h17
-set guifont=NerdHackFont
+set guifont=Hack\ Nerd\ Font\ 14
 
 autocmd BufEnter * lcd %:p:h
