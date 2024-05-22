@@ -31,14 +31,6 @@ install () {
 	
 		makepkg -si
 		
-		# Remove makedepends automatically
-
-		#if grep -q "^makedepends" "PKGBUILD"
-		#then
-		#		awk -F "=" '/^makedepends/ {print $2}' PKGBUILD | tr -d '()"' | \
-		#			xargs sudo pacman -Rns --noconfirm
-		#fi
-
 		cd "$CACHE_DIR" || exit
 	done	
 }
