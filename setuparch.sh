@@ -15,7 +15,7 @@ mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wa
  
 # Install usefull software
 
-sudo pacman -S zsh zsh-syntax-highlighting bat eza wget neofetch shellcheck xorg xorg-xinit bspwm sxhkd \
+sudo pacman -S zsh zsh-syntax-highlighting gvim bat eza wget neofetch shellcheck xorg xorg-xinit bspwm sxhkd \
        noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra man-pages gdb git yt-dlp mpv nano feh \
        picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
 

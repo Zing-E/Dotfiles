@@ -75,6 +75,11 @@ super + y
 super + d
 	st -e htop
 
+# Start gvim
+
+super + a
+	gvim
+
 # Change to US
 
 super + r
