@@ -21,7 +21,7 @@ sudo pacman -S zsh zsh-syntax-highlighting gvim bat eza wget fastfetch shellchec
 
 # Download software from aur
 
-./scripts/aur install htop-vim xcursor-breeze tty-clock turbo-base64 ueberzugpp google-chrome
+./scripts/aur install htop-vim xcursor-breeze gruvbox-dark-gtk tty-clock turbo-base64 ueberzugpp google-chrome
 
 # Install dotfiles
 
