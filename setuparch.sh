@@ -3,7 +3,7 @@
 # My Arch/Artix setup script (base-devel is needed for this)
 
 # NOTE
-# Run this after starting Xorg (for wallpaper): feh --bg-scale /home/"$USER"/.local/wallpapers/landspace.jpg
+# Run this after starting Xorg (for wallpaper): feh --bg-scale /home/"$USER"/.local/wallpapers/landscape.jpg
 # Also run :PlugInstall in vim to install plugins.
 # If using Artix Linux enable the Arch repo extra for some packages here.
 # And please read what this script does, don't run commands from the internet if you don't know what there doing!
