@@ -16,7 +16,7 @@ mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wa
 # Install usefull software
 
 sudo pacman -S zsh zsh-syntax-highlighting gvim bat eza wget fastfetch shellcheck xorg xorg-xinit bspwm sxhkd \
-       noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra man-pages gdb git yt-dlp mpv nano feh \
+       noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra man-pages valgrind gdb git yt-dlp mpv nano feh \
        picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
 
 # Download software from aur
