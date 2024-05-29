@@ -5,8 +5,10 @@
 # USAGE
 # install [package(s)] (Install an aur package)
 # update (Update all aur packages on system)
-# search (Searches through aur database, download https://aur.archlinux.org/packages.gz and unzip it into your $CACHE_DIR dir)
+# search (Searches through aur database, 
 # clean (This removes cache of deleted aur packages)
+
+# For search, download https://aur.archlinux.org/packages.gz and unzip it into your $CACHE_DIR dir.
 
 # This is the dir where aur keeps up with the built packages; you can put it where ever you like.
 
