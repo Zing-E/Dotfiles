@@ -15,13 +15,13 @@ mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wa
  
 # Install usefull software
 
-sudo pacman -S zsh zsh-syntax-highlighting gvim bat eza wget fastfetch shellcheck xorg xorg-xinit bspwm sxhkd \
-       noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra man-pages valgrind gdb git yt-dlp mpv nano feh \
-       picom unclutter dmenu lxappearance ranger ttf-hack-nerd pulsemixer
+sudo pacman -S bat bspwm dmenu eza fastfetch feh gdb git gvim lxappearance man-pages mpv nano noto-fonts \
+	noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
+	sxhkd ttf-hack-nerd unclutter valgrind wget xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
-./scripts/aur install htop-vim xcursor-breeze gruvbox-dark-gtk tty-clock turbo-base64 ueberzugpp google-chrome
+./scripts/aur install google-chrome gruvbox-dark-gtk htop-vim tty-clock turbo-base64 ueberzugpp xcursor-breeze 
 
 # Install dotfiles
 
