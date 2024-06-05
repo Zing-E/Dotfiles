@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This is useful because launching the browser is slow on older hardware
+# This is useful because launching the browser on older hardware
 
 BROWSER="google-chrome-stable --force-dark-mode"
 
