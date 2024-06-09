@@ -10,9 +10,10 @@ set number relativenumber
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'justinmk/vim-syntax-extra'
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'justinmk/vim-syntax-extra'
 
 call plug#end()
 
