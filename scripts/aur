@@ -100,5 +100,5 @@ case "$1" in
 	update) update ;;
 	search) search "$@" ;;
 	clean) clean ;; 
-	*) echo "$0: [install update search clean]" && exit ;;
+	*) echo "$0: [install update search clean]" && exit 1 ;;
 esac
