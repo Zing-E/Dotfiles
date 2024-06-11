@@ -74,6 +74,9 @@ clean () {
 		package=$(echo "$package" | awk -F "/" '{print $NF}')
 		
 		[ "$package" = "packages" ] && continue
+	
+		# Check pacman -Qq too, because different Arch based distros might see the package
+		# as in its repo.
 
 		if ! { pacman -Qq; pacman -Qqm; } | grep -qw "$package"
 		then
