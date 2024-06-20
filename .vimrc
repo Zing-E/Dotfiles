@@ -17,7 +17,7 @@ Plug 'justinmk/vim-syntax-extra'
 
 call plug#end()
 
-let g:airline_powerline_fonts = 1 " Install Hack patched powerline font
+let g:airline_powerline_fonts = 1 
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 
@@ -30,5 +30,7 @@ set guioptions=Ace
 " For MacOS
 "set guifont=HackNFM-Regular:h17
 set guifont=Hack\ Nerd\ Font\ 14
+
+" To sync NERDTree when changing buffers
 
 autocmd BufEnter * lcd %:p:h
