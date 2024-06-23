@@ -15,6 +15,7 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'charlespascoe/vim-go-syntax'
 Plug 'justinmk/vim-syntax-extra'
 
 call plug#end()
