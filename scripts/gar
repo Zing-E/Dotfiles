@@ -4,8 +4,9 @@
 
 [ "$#" -lt 3 ] && echo "usage: $0 [branch] [comment] [file(s)]" && exit 1
 
+shift 2
+
 for i in "$@"; do
-	[ "$i" = "$1" ] || [ "$i" = "$2" ] && continue
 	git rm "$i"
 done
 
