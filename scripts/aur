@@ -16,11 +16,9 @@ CACHE_DIR="/home/$USER/.cache/aur"
 
 install () {
 	cd "$CACHE_DIR" || exit
-
+	shift
 	for package in "$@"
 	do
-		[ "$package" = "install" ] && continue
-	
 		git clone "https://aur.archlinux.org/$package" 2>/dev/null
 			
 		if ! ls "$package" | grep -qw "PKGBUILD"
@@ -87,10 +85,9 @@ clean () {
 }
 
 search () { 
+	shift
 	for package in "$@"
 	do
-		[ "$package" = "search" ] && continue
-
 		grep --color=auto "$package" "$CACHE_DIR/packages"
 	done
 }
