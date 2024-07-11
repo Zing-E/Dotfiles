@@ -4,12 +4,15 @@
 
 [ "$#" -lt 3 ] && echo "usage: $0 [branch] [comment] [file(s)]" && exit 1
 
+BRANCH="$1"
+COMMENT="$2"
+
 shift 2
 
 for i in "$@"; do
 	git rm "$i"
 done
 
-git commit -m "$2"
+git commit -m "$BRANCH"
 
-git push -u origin "$1"
+git push -u origin "$COMMENT"
