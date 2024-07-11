@@ -13,6 +13,6 @@ for i in "$@"; do
 	git add "$i"
 done
 
-git commit -m "$BRANCH"
+git commit -m "$COMMENT"
 
-git push -u origin "$COMMENT"
+git push -u origin "$BRANCH"
