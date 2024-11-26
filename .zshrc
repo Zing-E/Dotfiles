@@ -6,9 +6,9 @@
 
 # Zings's zshrc
 
-# Enables colors
-
 # If using MacOS change /home/ to /Users/
+
+# Enables colors
 
 autoload -U colors && colors
 
