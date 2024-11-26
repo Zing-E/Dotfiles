@@ -10,8 +10,8 @@
  
 # Create used directories
 
-mkdir -p /home/"$USER"/.config/{bspwm,sxhkd,ranger} /home/"$USER"/.local/{bin,wallpapers} \
-       	/home/"$USER"/.cache/aur
+mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,ranger,sxhkd} \
+	/home/"$USER"/.local/{bin,wallpapers} 
  
 # Install usefull software
 
@@ -25,22 +25,22 @@ sudo pacman -S bat bspwm dmenu eza fastfetch feh firefox gdb git gvim lxappearan
 
 # Install dotfiles
 
+cp bspwmrc /home/"$USER"/.config/bspwm
+
+cp landscape.jpg /home/"$USER"/.local/wallpapers
+
+cp picom.conf /home/"$USER"/.config 
+
+cp rc.conf /home/"$USER"/.config/ranger
+
+cp sxhkdrc /home/"$USER"/.config/sxhkd
+
 cp .xinitrc /home/"$USER"
 
 cp .vimrc /home/"$USER"
 
 cp .zshrc /home/"$USER"
-
-cp bspwmrc /home/"$USER"/.config/bspwm
-
-cp sxhkdrc /home/"$USER"/.config/sxhkd
-
-cp rc.conf /home/"$USER"/.config/ranger
-
-cp picom.conf /home/"$USER"/.config # This is so that the chrome borders look normal
-
-cp landscape.jpg /home/"$USER"/.local/wallpapers
-
+ 
 # Scripts
 
 cp scripts/* /home/"$USER"/.local/bin
