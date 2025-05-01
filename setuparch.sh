@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# My Arch/Artix setup script (base-devel is needed for this)
+# My Arch setup script (base-devel is needed for this)
 
 # NOTE
 # Run this after starting Xorg (for wallpaper): feh --bg-scale /home/"$USER"/.local/wallpapers/landscape.jpg
 # Also run :PlugInstall in vim to install plugins.
-# If using Artix Linux enable the Arch repo extra for some packages here.
 # And please read what this script does, don't run commands from the internet if you don't know what there doing!
  
 # Create used directories
@@ -15,13 +14,13 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,ranger,sxhkd} \
  
 # Install usefull software
 
-sudo pacman -S bat bspwm dmenu eza fastfetch feh firefox gdb git gvim lxappearance man-pages mpv nano \
+sudo pacman -S bat bitwarden bspwm dmenu eza fastfetch feh gdb git gvim lxappearance man-pages mpv nano \
    	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
 	sxhkd ttf-hack-nerd unclutter valgrind wget xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
-./scripts/aur install gruvbox-dark-gtk htop-vim tty-clock turbo-base64 ueberzugpp xcursor-breeze 
+./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim tty-clock turbo-base64 ueberzugpp xcursor-breeze 
 
 # Install dotfiles
 
@@ -57,16 +56,6 @@ cd zsh-colored-man-pages || exit
 makepkg -si
 
 cd ..
-
-# Enable and start pipewire
-
-if grep -q "Artix" /etc/os-release 
-then
-	echo "See .xintrc for pipewire"
-else
-	systemctl --user enable pipewire-pulse
-	systemctl --user start pipewire-pulse
-fi
 
 # Lastly setup my st and dmenu build
 

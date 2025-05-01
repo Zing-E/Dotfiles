@@ -30,10 +30,10 @@ super + {_,shift + }a
 super + e
 	dmenu_run
 
-# Start Chrome
+# Start Brave
 
 super + j
-	google-chrome-stable --force-dark-mode # MY EYES
+	brave-bin
 
 # Change Between Workspaces
 
