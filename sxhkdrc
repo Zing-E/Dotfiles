@@ -25,6 +25,11 @@ super + Return
 super + {_,shift + }a
 	bspc node -{c, k}
 
+# Start Bitwarden
+
+super + x
+	bitwarden-desktop
+
 # Start dmenu
 
 super + e
@@ -47,17 +52,17 @@ super + u
 
 # Start pulsemixer
 
-super + k
+super + n
 	st -e pulsemixer
 
 # Turn up audio
 
-super + b
+super + h
 	pulsemixer --change-volume +15
 
 # Turn down audio
 
-super + x
+super + t
 	pulsemixer --change-volume -15
 
 # Toggle mute
