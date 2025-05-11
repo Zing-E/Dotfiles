@@ -38,7 +38,7 @@ super + e
 # Start Brave
 
 super + j
-	brave-bin
+	brave
 
 # Change Between Workspaces
 
