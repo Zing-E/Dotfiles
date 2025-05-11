@@ -14,7 +14,7 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,ranger,sxhkd} \
  
 # Install usefull software
 
-sudo pacman -S bat bitwarden bspwm dmenu eza fastfetch feh gdb git gvim lxappearance man-pages mpv nano \
+sudo pacman -S bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano neofetch \
    	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
 	sxhkd ttf-hack-nerd unclutter valgrind wget xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
