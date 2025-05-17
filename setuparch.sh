@@ -9,7 +9,7 @@
  
 # Create used directories
 
-mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,ranger,sxhkd} \
+mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sxhkd} \
 	/home/"$USER"/.local/{bin,wallpapers} 
  
 # Install usefull software
@@ -29,6 +29,8 @@ cp bspwmrc /home/"$USER"/.config/bspwm
 cp landscape.jpg /home/"$USER"/.local/wallpapers
 
 cp picom.conf /home/"$USER"/.config 
+
+cp config.ini /home/"$USER"/.config/polybar
 
 cp rc.conf /home/"$USER"/.config/ranger
 
