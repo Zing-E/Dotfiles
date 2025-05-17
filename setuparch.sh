@@ -16,7 +16,7 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,ranger,sxhkd} \
 
 sudo pacman -S bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano neofetch \
    	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
-	sxhkd ttf-hack-nerd unclutter valgrind wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
+	sxhkd ttf-hack-nerd unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
