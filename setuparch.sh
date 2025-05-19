@@ -15,12 +15,12 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sx
 # Install usefull software
 
 sudo pacman -S bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano neofetch \
-   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
+   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger rclone shellcheck \
 	sxhkd ttf-hack-nerd unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
-./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim tty-clock turbo-base64 ueberzugpp xcursor-breeze 
+./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim rclone-browser tty-clock turbo-base64 ueberzugpp xcursor-breeze 
 
 # Install dotfiles
 
