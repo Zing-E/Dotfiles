@@ -20,7 +20,7 @@ sudo pacman -S bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-p
 
 # Download software from aur
 
-./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim tty-clock turbo-base64 ueberzugpp xcursor-breeze 
+./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim turbo-base64 ueberzugpp xcursor-breeze 
 
 # Install dotfiles
 

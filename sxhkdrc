@@ -15,16 +15,30 @@
 super + z
 	killall Xorg
 
-# Start terminal
-
-super + Return
-	st
-
 # Kill window 
 
 super + {_,shift + }a
 	bspc node -{c, k}
 
+# Change focus of windows
+
+super + shift + h
+	bspc node -f west
+
+super + shift + l
+	bspc node -f east
+
+super + shift + k
+	bspc node -f north
+
+super + shift + j
+	bspc node -f south
+
+# Start terminal
+
+super + Return
+	st
+#
 # Start Bitwarden
 
 super + x
@@ -37,7 +51,7 @@ super + e
 
 # Start Brave
 
-super + j
+super + y
 	brave
 
 # Change Between Workspaces
@@ -69,11 +83,6 @@ super + t
 
 super + m
 	pulsemixer --toggle-mute
-
-# Start tty-clock
-
-super + y
-	st -e tty-clock -tsc
 
 # Starts htop
 
