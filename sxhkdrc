@@ -51,7 +51,7 @@ super + e
 
 # Start Brave
 
-super + y
+super + j
 	brave
 
 # Change Between Workspaces
