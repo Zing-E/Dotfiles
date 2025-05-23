@@ -1,0 +1,7 @@
+#!/bin/sh
+
+PROFILE_NAME=""
+
+[ $# -lt 2 ] && echo "usage: $0 [command] [location]" && exit 1
+
+aws-vault exec "$PROFILE_NAME" -- aws s3 "$@"

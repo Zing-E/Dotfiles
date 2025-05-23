@@ -14,8 +14,8 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sx
  
 # Install usefull software
 
-sudo pacman -S bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano neofetch \
-   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra picom pulsemixer ranger shellcheck \
+sudo pacman -S aws-vault bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano neofetch \
+   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pass picom pulsemixer ranger shellcheck \
 	sxhkd ttf-hack-nerd unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
