@@ -15,7 +15,7 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sx
 # Install usefull software
 
 sudo pacman -S aws-vault bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano \
-   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pass picom pulsemixer ranger shellcheck \
+   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pass picom polybar pulsemixer ranger shellcheck \
 	sxhkd ttf-hack-nerd unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
@@ -58,6 +58,12 @@ cd zsh-colored-man-pages || exit
 makepkg -si
 
 cd ..
+
+# Enable pulsewire-pulse
+
+systemctl --user enable pipewire-pulse
+
+systemctl --user start pipewire-pulse 
 
 # Lastly setup my st and dmenu build
 
