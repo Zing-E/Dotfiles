@@ -16,11 +16,11 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sx
 
 sudo pacman -S aws-vault bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano \
    	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pass picom polybar pulsemixer ranger shellcheck \
-	sxhkd ttf-hack-nerd unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
+	sxhkd ttf-hack-nerd ueberzugpp unclutter valgrind vlc wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting
 
 # Download software from aur
 
-./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim turbo-base64 ueberzugpp xcursor-breeze 
+./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim xcursor-breeze 
 
 # Install dotfiles
 
