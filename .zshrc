@@ -37,6 +37,12 @@ alias zshrc='vim /home/$USER/.zshrc'
 
 export PATH=/home/$USER/.local/bin:$PATH
 
+# For aws-vault
+
+export AWS_VAULT_BACKEND=pass
+export PASSWORD_STORE_DIR=~/.password-store
+export GPG_TTY=$(tty)
+
 # Plugins
 
 source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.zsh 
