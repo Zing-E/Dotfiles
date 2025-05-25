@@ -5,7 +5,7 @@
 # NOTE
 # Run this after starting Xorg (for wallpaper): feh --bg-scale /home/"$USER"/.local/wallpapers/landscape.jpg
 # Also run :PlugInstall in vim to install plugins.
-# And please read what this script does, don't run commands from the internet if you don't know what there doing!
+# And please read what this script does, don't run commands from the internet if you don't know what they're doing!
  
 # Create used directories
 
