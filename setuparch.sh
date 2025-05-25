@@ -21,7 +21,7 @@ sudo pacman -S aws-vault bat bitwarden bspwm dmenu eza feh gdb git gvim lxappear
 
 # Download software from aur
 
-./scripts/aur install brave-bin gruvbox-dark-gtk htop-vim xcursor-breeze 
+./scripts/aur install aws-cli-bin brave-bin gruvbox-dark-gtk htop-vim xcursor-breeze 
 
 # Install dotfiles
 
