@@ -12,12 +12,12 @@
 mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sxhkd} \
 	/home/"$USER"/.local/{bin,wallpapers} 
  
-# Install usefull software
+# Install useful software
 
-sudo pacman -S aws-vault bat bitwarden bspwm dmenu eza feh gdb git gvim lxappearance man-pages mpv nano \
-   	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra pass picom polybar pulsemixer ranger \
-	shellcheck sxhkd ttf-hack-nerd torbrowser-launcher ueberzugpp unclutter valgrind vlc wget xclip xorg \
-	xorg-xinit yt-dlp zsh zsh-syntax-highlighting
+sudo pacman -S aircrack-ng aws-vault bitwarden bspwm dmenu eza feh gdb git go gvim ltrace lxappearance man-pages \
+	mpv nano noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nmap pass picom polybar pulsemixer \
+	ranger shellcheck strace sxhkd ttf-hack-nerd torbrowser-launcher ueberzugpp unclutter valgrind vlc wget \
+	xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
