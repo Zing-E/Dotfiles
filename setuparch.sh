@@ -14,10 +14,10 @@ mkdir -p /home/"$USER"/.cache/aur /home/"$USER"/.config/{bspwm,polybar,ranger,sx
  
 # Install useful software
 
-sudo pacman -S aircrack-ng aws-vault bitwarden bspwm dmenu eza feh gdb git go gvim ltrace lxappearance man-pages \
-	mpv nano noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nmap pass picom polybar pulsemixer \
-	ranger shellcheck strace sxhkd ttf-hack-nerd torbrowser-launcher ueberzugpp unclutter valgrind vlc wget \
-	xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
+sudo pacman -S aircrack-ng arp-scan aws-vault bitwarden bspwm dmenu eza feh gdb git go gvim ltrace lxappearance \
+	man-pages mpv nano noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nmap pass picom polybar \
+	pulsemixer ranger shellcheck strace sxhkd ttf-hack-nerd torbrowser-launcher ueberzugpp unclutter valgrind vlc \
+   	wget xclip xorg xorg-xinit yt-dlp zsh zsh-syntax-highlighting 
 
 # Download software from aur
 
@@ -49,7 +49,7 @@ cp scripts/* /home/"$USER"/.local/bin
 
 # Install vim plug
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -fLo /home"$USER"/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Download and install zsh-colored-man-pages (read this script before runnig it)
