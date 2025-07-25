@@ -8,6 +8,8 @@ set encoding=utf-8
 set number relativenumber
 set tabstop=4
 set shiftwidth=4
+set cursorline
+set wildmenu
 
 call plug#begin()
 
