@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "HackNerdFont:pixelsize=18:antialias=true:autohint=true";
+static char *font = "HackNerdFont:pixelsize=26:antialias=true:autohint=true";
 static int borderpx = 6;
 
 /*
@@ -143,7 +143,7 @@ static unsigned int defaultrcs = 257;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorstyle = 3;
+static unsigned int cursorstyle = 5;
 static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
