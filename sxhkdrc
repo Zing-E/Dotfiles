@@ -1,120 +1,106 @@
-#  _________      .__     __       .___
+#  _________        .__     __       .___
 # /   _____/__  __|  |__ |  | __ __| _/
 # \_____  \\  \/  /  |  \|  |/ // __ | 
-# /        \>    <|   Y  \    </ /_/ | 
+# /        \>    <|    Y  \    </ /_/ | 
 #/_______  /__/\_ \___|  /__|_ \____ | 
 #        \/      \/    \/     \/    \/ 
 
 # Zing's sxhkdrc
+# Note: I use dvorak so the letters are different but
+# sxhkd reads only qwerty, so thats why the letters seem weird.
 
-# I use dvorak so the letters are different but, sxhkd reads only qwerty
-# so thats why the letters seem weird```
-
-# Stop bspwm
-
-super + z
-	killall Xorg
-
-# Kill window 
-
-super + {_,shift + }a
-	bspc node -{c, k}
-
-# Change focus of windows
-
-super + shift + h
-	bspc node -f west
-
-super + shift + l
-	bspc node -f east
-
-super + shift + k
-	bspc node -f north
-
-super + shift + j
-	bspc node -f south
+# -------------------------------------------------------------------
+# SYSTEM & LAUNCHERS
+# -------------------------------------------------------------------
 
 # Start terminal
-
 super + Return
-	st
-#
-# Start Bitwarden
+    st
 
-super + x
-	bitwarden-desktop
-
-# Start dmenu
-
+# Start dmenu (Launcher)
 super + e
-	dmenu_run
+    dmenu_run
+
+# Toggle layout script
+super + space
+    toggle-layout.sh
+
+# Force set layout to Dvorak
+super + l
+    setxkbmap -variant dvorak
+
+# Kill Xorg (Stop bspwm)
+super + z
+    killall Xorg
+
+# -------------------------------------------------------------------
+# APPLICATIONS (Alphabetized by Key)
+# -------------------------------------------------------------------
+
+# Open Blueberry (Bluetooth)
+super + b
+    blueberry
+
+# Start Discord (Vesktop)
+super + d
+    vesktop
+
+# Open htop (Process Viewer)
+super + h
+    st -e htop
 
 # Start Brave
+super + j
+    brave --force-device-scale-factor=1.4
 
-super + y
-	brave
+# Start Gvim
+super + o
+    gvim
 
-# Change Between Workspaces
+# Start PrismLauncher (Minecraft)
+super + p
+    prismlauncher
 
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} focused:^{1-9,10}
+# Open Pulsemixer (Audio GUI)
+super + s
+    st -e pulsemixer
 
-# Change to fullscreen
+# Start Bitwarden
+super + x
+    bitwarden-desktop
 
+# -------------------------------------------------------------------
+# WINDOW MANAGEMENT
+# -------------------------------------------------------------------
+
+# Kill/Close window
+super + {_,shift + }a
+    bspc node -{c,k}
+
+# Change window focus (Vim keys)
+super + shift + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+# Toggle fullscreen
 super + u
-	bspc node -t \~fullscreen
+    bspc node -t \~fullscreen
 
-# Start pulsemixer
+# Change Workspace (1-10)
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,window -d} focused:^{1-9,10}
 
-super + n
-	st -e pulsemixer
-
-# Turn up audio
-
-super + h
-	pulsemixer --change-volume +15
-
-# Turn down audio
-
-super + t
-	pulsemixer --change-volume -15
+# -------------------------------------------------------------------
+# AUDIO CONTROLS
+# -------------------------------------------------------------------
 
 # Toggle mute
-
 super + m
-	pulsemixer --toggle-mute
+    pulsemixer --toggle-mute
 
-# Starts htop
+# Turn down audio
+super + n
+    pulsemixer --change-volume -15
 
-super + d
-	st -e htop
-
-# Change to US
-
-super + r
-	setxkbmap us
-
-# Change to dvorak
-
-super + l
-	setxkbmap -variant dvorak
-
-# Start ranger
-
-super + p
-	st -e ranger /home/$USER
-
-# Game selector
-
-super + i
-	games
-
-# Web search
-
-super + o 
-	websearch
-
-# Start gvim
-
-super + v
-	gvim
+# Turn up audio
+super + t
+    pulsemixer --change-volume +15
