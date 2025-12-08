@@ -25,7 +25,7 @@ yay -S arp-scan aws-vault bind bitwarden bspwm dmenu eza feh firejail gdb go gvi
 	ueberzugpp unclutter unzip valgrind vlc wget wireshark-qt xclip xorg xorg-xinit yt-dlp zip zsh zsh-syntax-highlighting 
 
 # Download software from aur
-yay -S brave-bin gruvbox-dark-gtk htop-vim xcursor-breeze 
+yay -S brave-bin gruvbox-dark-gtk htop-vim vesktop xcursor-breeze 
 
 # Install dotfiles
 cp bspwmrc /home/"$USER"/.config/bspwm
