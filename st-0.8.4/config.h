@@ -143,7 +143,7 @@ static unsigned int defaultrcs = 257;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorstyle = 5;
+static unsigned int cursorstyle = 6;
 static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
