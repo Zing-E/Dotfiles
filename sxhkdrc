@@ -25,10 +25,6 @@ super + e
 super + space
     toggle-layout.sh
 
-# Force set layout to Dvorak
-super + l
-    setxkbmap -variant dvorak
-
 # Kill Xorg (Stop bspwm)
 super + z
     killall Xorg
@@ -53,13 +49,21 @@ super + h
 super + j
     brave --force-device-scale-factor=1.4
 
+# Start PrismLauncher (Minecraft)
+super + l
+	prismlauncher
+
 # Start Gvim
 super + o
     gvim
 
-# Start PrismLauncher (Minecraft)
+# Start Ranger (File Viewer)
 super + p
-    prismlauncher
+    st -e ranger
+
+# Take Screenshot
+super + r
+	maim ~/Screenshots/$(date +%s).png
 
 # Open Pulsemixer (Audio GUI)
 super + s
