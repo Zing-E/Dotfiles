@@ -8,7 +8,7 @@
 # And please read what this script does, don't run commands from the internet if you don't know what they're doing!
 
 # Create used directories
-mkdir -p /home/"$USER"/Screenshots /home/"$USER"/.config/{bspwm,polybar,ranger,sxhkd} \
+mkdir -p /home/"$USER"/Screenshots /home/"$USER"/.config/{bspwm,nvim,polybar,ranger,sxhkd} \
 	/home/"$USER"/.local/{bin,wallpapers} 
 
 # Install yay
@@ -20,9 +20,10 @@ cd ..
 
 # Install useful software
 yay -S arp-scan aws-vault bind bitwarden blueberry bspwm dmenu eza feh firejail gdb go gvim hashcat ltrace \
-	lxappearance macchanger maim man-pages mpv nano noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nmap \
-	picom polybar pulsemixer python-pipx ranger shellcheck strace sxhkd tcpdump ttf-hack-nerd tor torbrowser-launcher \
-	ueberzugpp unclutter unzip valgrind vlc wget wireshark-qt xclip xorg xorg-xinit yt-dlp zip zsh zsh-syntax-highlighting 
+	lxappearance macchanger maim man-pages mpv nano neovide neovim nmap noto-fonts noto-fonts-cjk \
+	noto-fonts-emoji noto-fonts-extra picom polybar pulsemixer python-pipx ranger shellcheck strace sxhkd \
+	tcpdump tor torbrowser-launcher tree-sitter-cli ttf-hack-nerd ueberzugpp unclutter unzip valgrind vlc \
+	wget wireshark-qt xclip xorg xorg-xinit yt-dlp zip zsh zsh-syntax-highlighting
 
 # Download software from aur
 yay -S brave-bin gruvbox-dark-gtk htop-vim prismlauncher vesktop xcursor-breeze 

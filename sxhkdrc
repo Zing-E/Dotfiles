@@ -53,9 +53,9 @@ super + j
 super + l
 	prismlauncher
 
-# Start Gvim
+# Start Neovide
 super + o
-    gvim
+    neovide
 
 # Start Ranger (File Viewer)
 super + p
