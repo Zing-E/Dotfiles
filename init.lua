@@ -14,44 +14,46 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
 vim.opt.wildmenu = true
-vim.opt.termguicolors = true -- Essential for good colors in Neovim
+vim.opt.termguicolors = true 
+vim.opt.background = "dark"
 
 require("lazy").setup({
-    { "ellisonleao/gruvbox.nvim", priority = 1000 },
-    "preservim/nerdtree",
-	{
-	"nvim-lualine/lualine.nvim",
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-	},
-	{
-  	'nvim-treesitter/nvim-treesitter',
- 	lazy = false,
- 	build = ':TSUpdate'
-   }
-})
+    { 
+        "ellisonleao/gruvbox.nvim", 
+        priority = 1000, 
+        config = function()
+            vim.cmd.colorscheme("gruvbox")
+        end
+    },
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("lualine").setup({
+                options = { theme = 'gruvbox' }
+            })
+        end
+    },
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            vim.g.loaded_netrw = 1
+            vim.g.loaded_netrwPlugin = 1
 
-vim.g.mapleader = " "
-vim.keymap.set("n", "c", '"_c')
-vim.keymap.set("n", "<C-n>", ":NERDTreeToggle<CR>")
-
-vim.opt.background = "dark"
-vim.cmd.colorscheme("gruvbox")
-
-if vim.g.neovide then
-    vim.opt.guifont = "Hack Nerd Font:h13"
-    vim.g.neovide_cursor_animation_length = 0   
-    vim.g.neovide_scroll_animation_length = 0  
-    vim.g.neovide_cursor_vfx_mode = ""        
-    vim.g.neovide_refresh_rate = 240
-end
-
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*",
-    command = "lcd %:p:h",
-})
-
-require('lualine').setup({
-    options = { theme = 'gruvbox' }
+            require("nvim-tree").setup({
+                hijack_netrw = true, 
+                actions = {
+                    open_file = { quit_on_open = true }, 
+                },
+            })
+        end
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        lazy = false,
+        build = ":TSUpdate",
+    },
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -60,3 +62,11 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.treesitter.start()
     end,
 })
+
+if vim.g.neovide then
+    vim.opt.guifont = "Hack Nerd Font:h14"
+    vim.g.neovide_cursor_animation_length = 0   
+    vim.g.neovide_scroll_animation_length = 0  
+    vim.g.neovide_cursor_vfx_mode = ""        
+    vim.g.neovide_refresh_rate = 240
+end
