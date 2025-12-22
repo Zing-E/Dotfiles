@@ -2,8 +2,8 @@
 
 # My Arch setup script (base-devel is needed for this)
 
-# NOTE
-# And please read what this script does, don't run commands from the internet if you don't know what they're doing!
+# NOTE	
+# Please read what this script does. Don't run commands from the internet if you don't know what they're doing!
 
 # Create used directories
 mkdir -p /home/"$USER"/Screenshots /home/"$USER"/.config/{bspwm,nvim,polybar,ranger,sxhkd} \
