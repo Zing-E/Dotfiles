@@ -29,13 +29,14 @@ yay -S arp-scan aws-vault bind bitwarden blueberry bspwm dmenu eza feh firejail 
 yay -S brave-bin gruvbox-dark-gtk htop-vim prismlauncher vesktop xcursor-breeze 
 
 # Install dotfiles
+cp .fehbg /home/"$USER"
 cp .vimrc /home/"$USER"
 cp .xinitrc /home/"$USER"
 cp .zshrc /home/"$USER"
 cp bspwmrc /home/"$USER"/.config/bspwm
 cp config.ini /home/"$USER"/.config/polybar
 cp init.lua /home/"$USER"/.config/nvim/
-cp landscape.jpg /home/"$USER"/.local/wallpapers
+cp city.jpg /home/"$USER"/.local/wallpapers
 cp picom.conf /home/"$USER"/.config 
 cp rc.conf /home/"$USER"/.config/ranger
 cp sxhkdrc /home/"$USER"/.config/sxhkd 
