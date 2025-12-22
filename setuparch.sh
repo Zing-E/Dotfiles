@@ -3,7 +3,6 @@
 # My Arch setup script (base-devel is needed for this)
 
 # NOTE
-# Also run :PlugInstall in vim to install plugins.
 # And please read what this script does, don't run commands from the internet if you don't know what they're doing!
 
 # Create used directories
