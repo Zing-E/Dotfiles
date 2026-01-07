@@ -37,9 +37,9 @@ super + z
 super + b
     blueberry
 
-# Start Discord (Vesktop)
+# Start Discord (Webcord)
 super + d
-    vesktop
+    webcord
 
 # Open htop (Process Viewer)
 super + h
